@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Único Restaurantes - Experiência Gastronômica Corporativa</title>
+    <meta name="description"
+        content="Transformando refeitórios em verdadeiros restaurantes corporativos com qualidade, alegria e variedade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --burgundy: #8B2E2E;
+    --gold: #FFA500;
+    --gray: #666666;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --dark: #1A1A1A;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--burgundy);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--burgundy);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--burgundy);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 73px;
+        left: -100%;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-top: 73px;
+    color: var(--white);
+    background: url("public/Unico30.jpg") center/cover no-repeat fixed;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Overlay escurecido */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 0, 0, 0.55);
+    z-index: 1;
+}
+
+/* Conteúdo da hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.hero-text {
+    max-width: 550px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+        background-position: center top;
+        background-size: cover;
+        height: auto;
+        padding: 12rem 1.5rem;
+        text-align: center;
+    }
+
+    .hero-overlay {
+        background: rgba(40, 0, 0, 0.65);
+    }
+
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 12rem 1.5rem;
+    }
+
+    .hero-text {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--gold);
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 5rem 2rem;
+}
+
+.section-alt {
+    background: var(--light-gray);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--burgundy);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* What We Do Section */
+.what-we-do-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGEM RETANGULAR EXATA NOS CARDS */
+.feature-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 1rem;
+    display: block;
+    background: #eee;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: var(--burgundy);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* Purpose Section */
+.purpose-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.purpose-highlight {
+    font-size: 2rem;
+    color: var(--burgundy);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.purpose-text {
+    font-size: 1.125rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    font-size: 3rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-top: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Departments Grid */
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.department-card {
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+    background: var(--gold);
+    color: var(--dark);
+}
+
+.department-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: inherit;
+}
+
+.department-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Structure Section */
+.structure-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.structure-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.structure-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 1.125rem;
+    color: var(--gray);
+}
+
+.structure-list li:last-child {
+    border-bottom: none;
+}
+
+.structure-list strong {
+    color: var(--burgundy);
+    font-weight: 600;
+}
+
+/* Image Slider Section */
+.image-slider-section {
+    background: var(--white);
+    padding: 5rem 2rem;
+}
+
+.image-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--burgundy) #ddd;
+}
+
+.image-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-slider::-webkit-scrollbar-thumb {
+    background: var(--burgundy);
+    border-radius: 4px;
+}
+
+.image-slider::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 300px;
+    scroll-snap-align: start;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.slide:hover {
+    transform: scale(1.05);
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal de visualização */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+    .slide {
+        width: 220px;
+        height: 220px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+}
+
+/* Operation Section */
+.operation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.operation-card {
+    background: var(--white);
+    padding: 2rem;
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.operation-card h3 {
+    font-size: 1.5rem;
+    color: var(--burgundy);
+    margin-bottom: 1rem;
+}
+
+.operation-card p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* ESG Section */
+.esg-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.esg-initiatives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.esg-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.esg-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.esg-card h3 {
+    font-size: 1.25rem;
+    color: var(--burgundy);
+    margin-bottom: 0.75rem;
+}
+
+.esg-card p {
+    color: var(--gray);
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--burgundy);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    width: 100%;
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background: #6B1E1E;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 3rem 2rem 1.5rem;
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: var(--gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: var(--burgundy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+}
+           
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="public/logo-unico.png" alt="Logo Único" width="130" />
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#proposito">Propósito</a></li>
+                <li><a href="#estrutura">Estrutura</a></li>
+                <li><a href="#operacao">Operação</a></li>
+                <li><a href="#esg">ESG</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Único Restaurante</h1>
+                    <p class="hero-subtitle">Transformamos Refeitórios em Restaurantes</p>
+                    <p>
+                        Oferecemos solução inovadora de alimentação corporativa, com qualidade, variedade, liberdade de escolha, atendimento excelente e ambiente acolhedor.
+                    </p>
+                    <a href="#contato" class="cta-button">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Mission -->
+<section id="mission" class="section">
+    <div class="container">
+        <h2 class="section-title">Nossa História</h2>
+        <p class="section-subtitle">
+            A Único Restaurantes nasceu da visão de profissionais com experiência no segmento de restaurantes corporativos, acumulada em diversos nichos: indústrias, condomínios empresariais, escolas, hospitais, varejo e centrais de produção de alimentos em conjunto com profissionais de compliance e auditoria, criando a ÚNICO que oferece solução inovadora de alimentação corporativa com transparência e governança.
+        </p>
+
+        <div class="what-we-do-grid">
+
+            <!-- CARD 1 -->
+            <div class="feature-card" data-gallery="galeria1">
+                <div class="img-wrapper">
+                    <!-- <img src="public/071unico_detalhes_comida.jpg" alt="Experiência Gastronômica" class="feature-img" /> -->
+                    <!-- <span class="photo-icon">📷</span> -->
+                </div>
+                <h3>Missão</h3>
+                <p>Oferecer uma solução inovadora de alimentação corporativa, com qualidade, variedade, liberdade de escolha, atendimento excelente e ambiente acolhedor.</p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="feature-card" data-gallery="galeria2">
+                <div class="img-wrapper">
+                    <!-- <img src="public/005unico_detalhes.jpg" alt="Ambientes Modernos" class="feature-img" /> -->
+                    <!-- <span class="photo-icon">📷</span> -->
+                </div>
+                <h3>Visão</h3>
+                <p>Ser referência em restaurantes corporativos, reconhecida pela transformação de refeitórios em restaurantes.</p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="feature-card" data-gallery="galeria3">
+                <div class="img-wrapper">
+                    <!-- <img src="public/variedade_thumb.png" alt="Variedade e Liberdade" class="feature-img" />
+                    <span class="photo-icon">📷</span>
+                </div> -->
+                <h3>Valores</h3>
+                <ul>
+  <li>Excelência com consistência</li>
+  <li>Segurança de alimentos inegociável (Food Safety)</li>
+  <li>Eficiência operacional</li>
+  <li>Transparência e governança</li>
+  <li>Respeito ao cliente e ao colaborador</li>
+  <li>Qualidade percebida (valor por refeição)</li>
+  <li>Parceria de longo prazo</li>
+  <li>Sustentabilidade prática</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- WHAT WE DO / GALERIAS -->
+<section id="sobre" class="section">
+  <div class="container">
+    <h2 class="section-title">Galeria de Imagens</h2>
+    <!-- <p class="section-subtitle">
+      A Único Restaurantes nasceu da visão de profissionais com experiência no segmento de restaurantes corporativos,
+      atuando em indústrias, condomínios empresariais, escolas, hospitais, varejo e centrais de produção de alimentos.
+    </p> -->
+
+    <div class="what-we-do-grid quatro-colunas">
+
+      <!-- VARIEDADE -->
+      <div class="feature-card" data-gallery="variedade">
+        <div class="img-wrapper">
+          <img src="public/1VariedadeLiberdade/001galeria_pasta1.jpg" alt="Variedade e liberdade de escolha" class="feature-img">
+          <span class="photo-icon">📷</span>
+        </div>
+        <h3>Variedade e liberdade de escolha</h3>
+        <p>Diversidade de opções para respeitar gostos, rotinas e escolhas.</p>
+      </div>
+
+      <!-- ATENDIMENTO -->
+      <div class="feature-card" data-gallery="atendimento">
+        <div class="img-wrapper">
+          <img src="public/2AtendimentoExcelente/001galeria_pasta2.jpg" alt="Atendimento excelente" class="feature-img">
+          <span class="photo-icon">📷</span>
+        </div>
+        <h3>Atendimento excelente</h3>
+        <p>Times preparados, próximos e atentos à experiência do cliente.</p>
+      </div>
+
+      <!-- AMBIENTE -->
+      <div class="feature-card" data-gallery="ambiente">
+        <div class="img-wrapper">
+          <img src="public/3AmbienteAcolhedor/001galeria_pasta3.jpg" alt="Ambiente acolhedor" class="feature-img">
+          <span class="photo-icon">📷</span>
+        </div>
+        <h3>Ambiente acolhedor</h3>
+        <p>Espaços pensados para conforto, pausa e convivência.</p>
+      </div>
+
+      <!-- LANCHONETE -->
+      <div class="feature-card" data-gallery="lanchonete">
+        <div class="img-wrapper">
+          <img src="public/4Lanchonete/001galeria_pasta4.jpg" alt="Lanchonete" class="feature-img">
+          <span class="photo-icon">📷</span>
+        </div>
+        <h3>Lanchonete</h3>
+        <p>Praticidade e rapidez para todos os momentos do dia.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL GALERIA -->
+<div id="galeria-modal" class="galeria-modal">
+  <span class="close-btn">&times;</span>
+  <img id="galeria-img" class="galeria-img" src="">
+  <span class="arrow left">&#10094;</span>
+  <span class="arrow right">&#10095;</span>
+</div>
+
+<style>
+/* GRID */
+.what-we-do-grid.quatro-colunas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .what-we-do-grid.quatro-colunas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .what-we-do-grid.quatro-colunas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.feature-card {
+  cursor: pointer;
+}
+
+/* ÍCONE FOTO */
+.img-wrapper {
+  position: relative;
+}
+.photo-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 18px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+/* MODAL */
+.galeria-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+.galeria-img {
+  max-width: 85%;
+  max-height: 80%;
+  transition: opacity .3s ease;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  user-select: none;
+}
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+.arrow:hover,
+.close-btn:hover {
+  color: #ffcc00;
+}
+</style>
+
+<script>
+// CONFIG DAS GALERIAS
+function gerarGaleria(pasta, total, sufixo) {
+  const imagens = [];
+  for (let i = 1; i <= total; i++) {
+    const numero = String(i).padStart(3, "0");
+    imagens.push(`public/${pasta}/${numero}${sufixo}`);
+  }
+  return imagens;
+}
+
+const galerias = {
+  variedade: gerarGaleria("1VariedadeLiberdade", 102, "galeria_pasta1.jpg"),
+  atendimento: gerarGaleria("2AtendimentoExcelente", 41, "galeria_pasta2.jpg"),
+  ambiente: gerarGaleria("3AmbienteAcolhedor", 31, "galeria_pasta3.jpg"),
+  lanchonete: gerarGaleria("4Lanchonete", 13, "galeria_pasta4.jpg")
+};
+
+// MODAL
+const modal = document.getElementById("galeria-modal");
+const modalImg = document.getElementById("galeria-img");
+const closeBtn = document.querySelector(".close-btn");
+const arrowLeft = document.querySelector(".arrow.left");
+const arrowRight = document.querySelector(".arrow.right");
+
+let imagensAtuais = [];
+let indexAtual = 0;
+
+document.querySelectorAll(".feature-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const key = card.dataset.gallery;
+    imagensAtuais = galerias[key];
+    indexAtual = 0;
+    abrirModal();
+  });
+});
+
+function abrirModal() {
+  modal.style.display = "flex";
+  mostrarImagem();
+}
+
+function mostrarImagem() {
+  modalImg.style.opacity = 0;
+  setTimeout(() => {
+    modalImg.src = imagensAtuais[indexAtual];
+    modalImg.style.opacity = 1;
+  }, 150);
+}
+
+arrowLeft.onclick = () => {
+  indexAtual = (indexAtual - 1 + imagensAtuais.length) % imagensAtuais.length;
+  mostrarImagem();
+};
+
+arrowRight.onclick = () => {
+  indexAtual = (indexAtual + 1) % imagensAtuais.length;
+  mostrarImagem();
+};
+
+closeBtn.onclick = () => modal.style.display = "none";
+
+document.addEventListener("keydown", e => {
+  if (modal.style.display === "flex") {
+    if (e.key === "Escape") modal.style.display = "none";
+    if (e.key === "ArrowLeft") arrowLeft.onclick();
+    if (e.key === "ArrowRight") arrowRight.onclick();
+  }
+});
+</script>
+
+
+
+    <!-- Purpose Section -->
+    <section id="proposito" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Nosso Propósito</h2>
+            <div class="purpose-content">
+                <p class="purpose-highlight">Transformar a experiência de alimentação dentro das empresas, tirando-as
+                    dos antigos refeitórios e trazendo para os nossos restaurantes.</p>
+
+                <p class="purpose-text">Mais do que montar e administrar restaurantes corporativos, buscamos criar
+                    ambientes bonitos, modernos e acolhedores, atendimento próximo, alegre. Tudo isso se completa com um
+                    produto bem elaborado, variedade de opções e liberdade de escolha.</p>
+
+                <p class="purpose-text">Cada espaço é pensado para gerar aconchego, bem-estar e humanização, valorizando
+                    o momento de pausa dos colaboradores. Acreditamos que um restaurante dentro da empresa deve ser um
+                    lugar de envolvimento, alegria e acolhimento.</p>
+
+                <p class="tagline">ÚNICO, DO SEU JEITO!</p>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- ESTRUTURA ORGANIZACIONAL -->
+<section id="estrutura" class="estrutura-section">
+  <div class="container">
+    <h2 class="estrutura-title">Nossa Estrutura</h2>
+
+    <div class="estrutura-grid">
+
+      <div class="estrutura-card gold">
+        <h3>Comercial</h3>
+        <p>Consultores especializados em soluções corporativas.</p>
+      </div>
+
+      <div class="estrutura-card wine">
+        <h3>Operacional</h3>
+        <p>Gerentes, supervisores, chefs de cozinha e equipes responsáveis pela execução.</p>
+      </div>
+
+      <div class="estrutura-card gold">
+        <h3>Arquitetura</h3>
+        <p>Arquitetos especializados em projetos de cozinhas industriais e restaurantes.</p>
+      </div>
+
+      <div class="estrutura-card wine">
+        <h3>Jurídico</h3>
+        <p>Suporte para formatação e gestão de contratos.</p>
+      </div>
+
+      <div class="estrutura-card wine">
+        <h3>Financeiro</h3>
+        <p>Contabilidade e fiscal juntos para garantir segurança financeira da operação.</p>
+      </div>
+
+      <div class="estrutura-card gold">
+        <h3>RH</h3>
+        <p>Estrutura dedicada ao cuidado com as pessoas.</p>
+      </div>
+
+      <div class="estrutura-card gold">
+        <h3>Suprimentos</h3>
+        <p>Escolha dos melhores produtos e fornecedores.</p>
+      </div>
+
+      <div class="estrutura-card wine">
+        <h3>PCP</h3>
+        <p>Nutricionistas que criam cardápios e produtos.</p>
+      </div>
+
+      <div class="estrutura-card wine">
+        <h3>Logística</h3>
+        <p>Operação logística própria.</p>
+      </div>
+
+      <div class="estrutura-card gold">
+        <h3>Gestão de Pessoas</h3>
+        <p>Profissionais comprometidos no desenvolvimento, retenção e crescimento dos nossos talentos.</p>
+      </div>
+
+      <div class="estrutura-card wine">
+        <h3>Segurança Alimentar</h3>
+        <p>Auditorias internas em todas as unidades.</p>
+      </div>
+
+      <div class="estrutura-card gold">
+        <h3>Segurança do Trabalho</h3>
+        <p>Garantia e cuidado com nossos processos.</p>
+      </div>
+
+      <div class="estrutura-card gold">
+        <h3>Marketing</h3>
+        <p>Padronização da comunicação, campanhas e consolidação da marca.</p>
+      </div>
+
+      <div class="estrutura-card wine">
+        <h3>Relacionamento</h3>
+        <p>Monitoramento da satisfação dos clientes.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* SECTION */
+.estrutura-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.estrutura-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #7a003c;
+}
+
+/* GRID */
+.estrutura-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* CARD BASE */
+.estrutura-card {
+  padding: 28px;
+  min-height: 160px;
+  border-radius: 28px 0 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.estrutura-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.estrutura-card p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* CORES */
+.estrutura-card.gold {
+  background: #d7a15a;
+  color: #ffffff;
+}
+
+.estrutura-card.wine {
+  background: #7a003c;
+  color: #ffffff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .estrutura-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .estrutura-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+   
+    <style>
+        /* --- Modal / Slider styles --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .modal[aria-hidden="false"] {
+            display: flex;
+        }
+
+        .modal-viewport {
+            width: 100%;
+            max-width: 1100px;
+            max-height: 90vh;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+            background: transparent;
+        }
+
+        /* track: flex row of slides */
+        .modal-track {
+            display: flex;
+            will-change: transform;
+            transition: transform 360ms cubic-bezier(.22, .9, .35, 1);
+            height: 100%;
+            align-items: center;
+        }
+
+        /* each slide inside modal */
+        .modal-slide {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .modal-slide img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /* Controls */
+        .modal-close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-size: 32px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            z-index: 10010;
+        }
+
+        .modal-prev,
+        .modal-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.45);
+            color: #fff;
+            border: none;
+            font-size: 34px;
+            padding: 10px 14px;
+            cursor: pointer;
+            z-index: 10010;
+            border-radius: 6px;
+        }
+
+        .modal-prev {
+            left: 14px;
+        }
+
+        .modal-next {
+            right: 14px;
+        }
+
+        .modal-prev:focus,
+        .modal-next:focus,
+        .modal-close:focus {
+            outline: 2px solid #fff;
+        }
+
+        /* small screens: controls larger and semi-transparent bottom caption space */
+        @media (max-width: 640px) {
+
+            .modal-prev,
+            .modal-next {
+                font-size: 28px;
+                padding: 10px;
+            }
+
+            .modal-close {
+                font-size: 28px;
+                right: 14px;
+                top: 14px;
+            }
+
+            .modal-viewport {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .modal-slide img {
+                max-height: 80vh;
+            }
+        }
+
+        /* cursor hint on desktop */
+        .image-slider .slide img {
+            cursor: zoom-in;
+        }
+    </style>
+
+    <script>
+        (function () {
+            const galleryImgs = Array.from(document.querySelectorAll('.image-slider .slide img'));
+            const modal = document.getElementById('imageModal');
+            const modalTrack = document.getElementById('modalTrack');
+            const btnClose = modal.querySelector('.modal-close');
+            const btnPrev = modal.querySelector('.modal-prev');
+            const btnNext = modal.querySelector('.modal-next');
+
+            let currentIndex = 0;
+            let modalOpen = false;
+
+            if (!galleryImgs.length) return;
+
+            // Build modal slides (clone sources into the track)
+            modalTrack.innerHTML = ''; // clear
+            galleryImgs.forEach((img, idx) => {
+                const slide = document.createElement('div');
+                slide.className = 'modal-slide';
+                slide.setAttribute('role', 'listitem');
+                // Use same src so caching helps; use data-src if you prefer lazy loading
+                const im = document.createElement('img');
+                im.setAttribute('src', img.getAttribute('src'));
+                im.setAttribute('alt', img.getAttribute('alt') || '');
+                im.setAttribute('draggable', 'false');
+                slide.appendChild(im);
+                modalTrack.appendChild(slide);
+
+                // make gallery images focusable and open modal on click/keyboard
+                img.dataset.index = idx;
+                img.setAttribute('tabindex', '0');
+                img.addEventListener('click', () => openModalAt(idx));
+                img.addEventListener('keydown', (ev) => {
+                    if (ev.key === 'Enter' || ev.key === ' ') {
+                        ev.preventDefault();
+                        openModalAt(idx);
+                    }
+                });
+            });
+
+            const slidesCount = modalTrack.children.length;
+
+            function openModalAt(index) {
+                currentIndex = normalize(index);
+                updateTrack(); // position
+                modal.setAttribute('aria-hidden', 'false');
+                modalOpen = true;
+                disableBackgroundScroll(true);
+                btnClose.focus();
+            }
+
+            function closeModal() {
+                modal.setAttribute('aria-hidden', 'true');
+                modalOpen = false;
+                disableBackgroundScroll(false);
+                // devolver foco para a imagem original
+                const orig = document.querySelector('.image-slider .slide img[data-index="' + currentIndex + '"]');
+                if (orig) orig.focus();
+            }
+
+            function normalize(i) {
+                return ((i % slidesCount) + slidesCount) % slidesCount;
+            }
+
+            function updateTrack(animate = true) {
+                // if you want to temporarily disable animation, you can toggle transition style
+                if (!animate) {
+                    modalTrack.style.transition = 'none';
+                    requestAnimationFrame(() => {
+                        modalTrack.style.transform = `translateX(${-currentIndex * 100}%)`;
+                        // re-enable transition
+                        requestAnimationFrame(() => modalTrack.style.transition = '');
+                    });
+                } else {
+                    modalTrack.style.transform = `translateX(${-currentIndex * 100}%)`;
+                }
+            }
+
+            function prevImage() {
+                currentIndex = normalize(currentIndex - 1);
+                updateTrack();
+            }
+            function nextImage() {
+                currentIndex = normalize(currentIndex + 1);
+                updateTrack();
+            }
+
+            // Buttons
+            btnClose.addEventListener('click', closeModal);
+            btnPrev.addEventListener('click', prevImage);
+            btnNext.addEventListener('click', nextImage);
+
+            // Close clicking outside (na viewport)
+            modal.addEventListener('click', function (e) {
+                // se clicou fora do track (no backdrop), fecha
+                if (e.target === modal) closeModal();
+            });
+
+            // Keyboard handler em captura — captura antes de outros listeners
+            window.addEventListener('keydown', function (e) {
+                if (!modalOpen) return;
+                // Normalize key name for Escape
+                const key = e.key;
+                if (key === 'ArrowLeft' || key === 'ArrowRight' || key === 'Escape' || key === 'Esc') {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    if (key === 'ArrowLeft') prevImage();
+                    else if (key === 'ArrowRight') nextImage();
+                    else if (key === 'Escape' || key === 'Esc') closeModal();
+                }
+            }, true); // capture = true
+
+            // also prevent scroll with arrow keys while modal open on the modal element
+            modal.addEventListener('keydown', function (e) {
+                if (['ArrowLeft', 'ArrowRight', 'Escape', 'Esc'].includes(e.key)) e.preventDefault();
+            });
+
+            // Touch / swipe support for mobile
+            let touchStartX = 0;
+            let touchCurrentX = 0;
+            let touching = false;
+            const SWIPE_THRESHOLD = 40; // px to consider a swipe
+
+            modalTrack.addEventListener('touchstart', function (e) {
+                if (!modalOpen) return;
+                touching = true;
+                touchStartX = e.touches[0].clientX;
+                touchCurrentX = touchStartX;
+                modalTrack.style.transition = 'none'; // disable during touch
+            }, { passive: true });
+
+            modalTrack.addEventListener('touchmove', function (e) {
+                if (!touching) return;
+                touchCurrentX = e.touches[0].clientX;
+                const dx = touchCurrentX - touchStartX;
+                // move the track visually by dx
+                modalTrack.style.transform = `translateX(${-currentIndex * 100 + (dx / modalTrack.clientWidth) * 100}%)`;
+            }, { passive: true });
+
+            modalTrack.addEventListener('touchend', function (e) {
+                if (!touching) return;
+                touching = false;
+                const dx = touchCurrentX - touchStartX;
+                modalTrack.style.transition = ''; // restore transition
+                if (dx > SWIPE_THRESHOLD) {
+                    // swipe right => prev
+                    prevImage();
+                } else if (dx < -SWIPE_THRESHOLD) {
+                    // swipe left => next
+                    nextImage();
+                } else {
+                    // small move -> snap back
+                    updateTrack();
+                }
+                touchStartX = touchCurrentX = 0;
+            });
+
+            // Mouse drag for desktop (optional)
+            let isMouseDown = false, mouseStartX = 0, mouseCurrentX = 0;
+            modalTrack.addEventListener('mousedown', function (e) {
+                e.preventDefault();
+                isMouseDown = true;
+                mouseStartX = e.clientX;
+                modalTrack.style.transition = 'none';
+            });
+            window.addEventListener('mousemove', function (e) {
+                if (!isMouseDown) return;
+                mouseCurrentX = e.clientX;
+                const dx = mouseCurrentX - mouseStartX;
+                modalTrack.style.transform = `translateX(${-currentIndex * 100 + (dx / modalTrack.clientWidth) * 100}%)`;
+            });
+            window.addEventListener('mouseup', function (e) {
+                if (!isMouseDown) return;
+                isMouseDown = false;
+                const dx = mouseCurrentX - mouseStartX;
+                modalTrack.style.transition = '';
+                if (dx > SWIPE_THRESHOLD) prevImage();
+                else if (dx < -SWIPE_THRESHOLD) nextImage();
+                else updateTrack();
+                mouseStartX = mouseCurrentX = 0;
+            });
+
+            // prevent background scrolling when modal open
+            function disableBackgroundScroll(disable) {
+                if (disable) {
+                    // store current overflow
+                    document.documentElement.style.scrollBehavior = 'auto';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // ensure initial track position
+            updateTrack(false);
+
+            // Accessibility: trap focus minimal (close, prev, next)
+            // If you need full focus trap, integrate a11y focus-trap library.
+            modal.addEventListener('keydown', function (e) {
+                if (!modalOpen) return;
+                if (e.key === 'Tab') {
+                    // simple trap between close and next/prev
+                    const focusables = [btnClose, btnPrev, btnNext];
+                    const idx = focusables.indexOf(document.activeElement);
+                    if (e.shiftKey) {
+                        // shift+tab
+                        const next = focusables[(idx - 1 + focusables.length) % focusables.length];
+                        next.focus();
+                        e.preventDefault();
+                    } else {
+                        const next = focusables[(idx + 1) % focusables.length];
+                        next.focus();
+                        e.preventDefault();
+                    }
+                }
+            });
+
+        })();
+    </script>
+
+
+
+
+    <!-- Modal de visualização -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    </section>
+
+
+
+ <!-- NOSSA OPERAÇÃO -->
+<section id="operacao" class="operacao-section">
+  <div class="container">
+
+    <h2 class="operacao-title">Nossa Operação</h2>
+    <p class="operacao-subtitle">Pessoas no centro da nossa operação</p>
+
+    <div class="operacao-grid">
+
+      <!-- IMAGEM -->
+      <div class="operacao-image">
+        <img src="public/estrutura.png" alt="Nossa operação">
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="operacao-cards">
+
+        <div class="operacao-card">
+          <h3>Seleção Cuidadosa</h3>
+          <p>
+            Cuidamos muito das contratações, avaliando perfis de atendimento,
+            moradia próxima ao trabalho e perfis comportamentais aderentes.
+          </p>
+        </div>
+
+        <div class="operacao-card">
+          <h3>Treinamento Contínuo</h3>
+          <p>
+            Possuímos uma plataforma física em cada restaurante com os QLH
+            (Quadros de Liderança Horizontal) juntamente com as rotinas do DDA
+            (Diálogo Diário de Alinhamento), que geram avaliação e treinamento
+            constante das equipes.
+          </p>
+        </div>
+
+        <div class="operacao-card">
+          <h3>Liderança Horizontal</h3>
+          <p>
+            Metodologia que gera compromisso, responsabilidade e reconhecimento
+            em cada um dos nossos colaboradores por meio das plataformas QLH e DDA.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* SECTION */
+.operacao-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.operacao-title {
+  text-align: center;
+  font-size: 36px;
+  color: #7a003c;
+  margin-bottom: 10px;
+}
+
+.operacao-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.operacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* IMAGE */
+.operacao-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* CARDS */
+.operacao-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.operacao-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border-left: 4px solid #d7a15a;
+}
+
+.operacao-card h3 {
+  font-size: 18px;
+  color: #c84a00;
+  margin-bottom: 8px;
+}
+
+.operacao-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .operacao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operacao-image {
+    order: -1;
+  }
+}
+</style>
+
+
+
+
+ <!-- QUALIDADE -->
+<section id="qualidade" class="qualidade-section">
+  <div class="container">
+
+    <h2 class="operacao-title">Qualidade</h2>
+    <p class="operacao-subtitle">Check list com nota por restaurante para garantir qualidade</p>
+
+    <div class="operacao-grid">
+
+      <!-- IMAGEM -->
+      <div class="operacao-image">
+        <img src="public/qualidade.png" alt="Nossa operação">
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="operacao-cards">
+
+        <div class="operacao-card">
+          <h3>Manual de Boas Práticas de Alimentação
+</h3>
+          <p>
+            Manual  de Boas práticas elaborado com cuidado e simplicidade para que toda a equipe compreenda e aplique as regras de conduta.
+
+POPs seguem o mesmo método, sendo simples, objetivos e de fácil aplicação.
+          </p>
+        </div>
+
+        <div class="operacao-card">
+          <h3>Treinamento de Qualidade</h3>
+          <p>
+            Rotinas de Treinamento envolvendo as lideranças semanalmente por plataforma virtual e aplicação via quadro de liderança horizontal e DDA (Dialogo Diário de Alinhamento) para as equipes de fabricação 
+          </p>
+        </div>
+
+        <div class="operacao-card">
+          <h3>CheckList / Auditoria</h3>
+          <p>
+            Aplicação mensal de checlist que aponta uma nota para cada restaurante e que é inserida nos relatório de resultado mensal. Tudo para exigir e consolidar o compromisso com a qualidade
+          </p>
+        </div>
+
+      </div>
+    </div><br><br>
+  </div>
+</section>
+
+<style>
+/* SECTION */
+.operacao-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.operacao-title {
+  text-align: center;
+  font-size: 36px;
+  color: #7a003c;
+  margin-bottom: 10px;
+}
+
+.operacao-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.operacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* IMAGE */
+.operacao-image img {
+  width: 70%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* CARDS */
+.operacao-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.operacao-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border-left: 4px solid #d7a15a;
+}
+
+.operacao-card h3 {
+  font-size: 18px;
+  color: #c84a00;
+  margin-bottom: 8px;
+}
+
+.operacao-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .operacao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operacao-image {
+    order: -1;
+  }
+}
+</style>
+
+ <!-- ESG Section -->
+<section id="esg" class="section section-alt">
+  <div class="container">
+
+    <!-- Header com logos -->
+    <div class="esg-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+      <div class="esg-logo-left">
+        <img src="public/esg.png" alt="Único ESG Restaurante Corporativo" style="max-height:150px;">
+      </div>
+      <div class="esg-logo-right">
+        <img src="public/esg2.png" alt="Selo ESG" style="max-height:150px;">
+      </div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="esg-content" style="border:1px solid #ccc; padding:24px; background:#f5f5f5;">
+
+      <p>
+        Na <strong>UNICO</strong>, ESG não é discurso — é método de operação.
+        Ao transformar refeitórios em restaurantes corporativos, assumimos um
+        compromisso permanente com o <strong>meio ambiente (E)</strong>,
+        <strong>impacto social (S)</strong> e <strong>governança (G)</strong>,
+        garantindo <strong>qualidade percebida</strong>,
+        <strong>segurança dos alimentos</strong> e
+        <strong>eficiência por refeição</strong>.
+      </p>
+
+      <p>
+        <strong>Ambiental (E):</strong> reduzimos impactos com foco em
+        <strong>combate ao desperdício</strong>,
+        <strong>gestão e destinação correta de resíduos</strong>
+        (recicláveis, orgânicos e óleo) e
+        <strong>uso eficiente de água e energia</strong>.
+        Acompanhamos indicadores como <strong>gramas de desperdício por refeição</strong>,
+        volume de resíduos e melhorias contínuas em processos e equipamentos.
+      </p>
+
+      <p>
+        <strong>Social (S):</strong> partimos do <strong>Food Safety</strong>
+        inegociável e ampliamos para o bem-estar do colaborador, com
+        <strong>cardápios inclusivos</strong>, informação clara e incentivo à
+        escolha consciente. Investimos no <strong>desenvolvimento do time</strong>,
+        com capacitação e oportunidades, e atuamos com foco em SST, ergonomia e
+        prevenção de acidentes. Quando viável, apoiamos ações locais por meio de
+        <strong>parcerias e doações responsáveis</strong>, com critérios sanitários
+        e governança.
+      </p>
+
+      <p>
+        <strong>Governança (G):</strong> operamos com
+        <strong>transparência, controles e responsabilidade</strong>,
+        com auditorias, padrões operacionais, compliance em compras, gestão de
+        fornecedores e <strong>reporte de indicadores ao cliente</strong>,
+        sustentando relações de longo prazo baseadas em
+        <strong>SLA, previsibilidade e integridade</strong>, com decisões
+        orientadas a dados.
+      </p>
+
+      <p>
+        Em síntese, o ESG da <strong>UNICO</strong> combina
+        <strong>eficiência operacional</strong>,
+        <strong>segurança</strong> e
+        <strong>responsabilidade</strong>, gerando resultados consistentes para
+        clientes, colaboradores e comunidade.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+<section id="contato" class="section">
+  <div class="container">
+
+    <h2 class="section-title">Entre em Contato</h2>
+    <p class="section-subtitle">
+      Vamos conversar sobre como podemos transformar a experiência de alimentação na sua empresa
+    </p>
+
+    <div class="contact-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:flex-start;">
+
+      <!-- Coluna Esquerda: Formulário -->
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Empresa</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+      <!-- Coluna Direita: Contatos -->
+      <div class="contact-info" style="background:#f5f5f5; padding:32px; border-radius:8px;">
+
+        <h3 style="margin-bottom:16px;">Contatos</h3>
+        <p style="margin-bottom:24px;">
+          Escolha o canal que preferir para falar com a Único Restaurantes.
+        </p>
+
+        <ul class="contact-list" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:16px;">
+
+          <li>
+            <strong>E-mail</strong><br>
+            <a href="mailto:comercial@unicorestaurante.com.br">
+              comercial@unicorestaurante.com.br
+            </a>
+          </li>
+
+          <li>
+            <strong>WhatsApp</strong><br>
+            <a href="https://wa.me/NUMERO-AQUI" target="_blank">
+              Clique para conversar no WhatsApp
+            </a>
+          </li>
+
+          <li>
+            <strong>LinkedIn</strong><br>
+            <a href="LINKEDIN-AQUI" target="_blank">
+              Acesse nosso LinkedIn
+            </a>
+          </li>
+
+          <li>
+            <strong>Instagram</strong><br>
+            <a href="INSTAGRAM-AQUI" target="_blank">
+              @unicorestaurante
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Único Restaurantes</h3>
+                <p>Transformando refeitórios em experiências gastronômicas corporativas.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <a href="#sobre">Sobre</a>
+                <a href="#proposito">Propósito</a>
+                <a href="#estrutura">Estrutura</a>
+                <a href="#operacao">Operação</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>comercial@unicorestaurantes.com.br</p>
+                <p>(16) 99757-0031</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Único Restaurantes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const navLinkItems = navLinks.querySelectorAll('a');
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 73; // Account for fixed nav height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Obrigado pelo contato! Retornaremos em breve.');
+            contactForm.reset();
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

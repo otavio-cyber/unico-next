@@ -1,0 +1,334 @@
+.
+├── app
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components
+│   ├── footer.tsx
+│   ├── navbar.tsx
+│   ├── sections
+│   │   ├── contact-section.tsx
+│   │   ├── esg-section.tsx
+│   │   ├── gallery-section.tsx
+│   │   ├── hero-section.tsx
+│   │   ├── mission-section.tsx
+│   │   ├── operation-section.tsx
+│   │   ├── purpose-section.tsx
+│   │   ├── quality-section.tsx
+│   │   └── structure-section.tsx
+│   ├── theme-provider.tsx
+│   └── ui
+│       ├── accordion.tsx
+│       ├── alert-dialog.tsx
+│       ├── alert.tsx
+│       ├── aspect-ratio.tsx
+│       ├── avatar.tsx
+│       ├── badge.tsx
+│       ├── breadcrumb.tsx
+│       ├── button-group.tsx
+│       ├── button.tsx
+│       ├── calendar.tsx
+│       ├── card.tsx
+│       ├── carousel.tsx
+│       ├── chart.tsx
+│       ├── checkbox.tsx
+│       ├── collapsible.tsx
+│       ├── command.tsx
+│       ├── context-menu.tsx
+│       ├── dialog.tsx
+│       ├── drawer.tsx
+│       ├── dropdown-menu.tsx
+│       ├── empty.tsx
+│       ├── field.tsx
+│       ├── form.tsx
+│       ├── hover-card.tsx
+│       ├── input-group.tsx
+│       ├── input-otp.tsx
+│       ├── input.tsx
+│       ├── item.tsx
+│       ├── kbd.tsx
+│       ├── label.tsx
+│       ├── menubar.tsx
+│       ├── navigation-menu.tsx
+│       ├── pagination.tsx
+│       ├── popover.tsx
+│       ├── progress.tsx
+│       ├── radio-group.tsx
+│       ├── resizable.tsx
+│       ├── scroll-area.tsx
+│       ├── select.tsx
+│       ├── separator.tsx
+│       ├── sheet.tsx
+│       ├── sidebar.tsx
+│       ├── skeleton.tsx
+│       ├── slider.tsx
+│       ├── sonner.tsx
+│       ├── spinner.tsx
+│       ├── switch.tsx
+│       ├── table.tsx
+│       ├── tabs.tsx
+│       ├── textarea.tsx
+│       ├── toaster.tsx
+│       ├── toast.tsx
+│       ├── toggle-group.tsx
+│       ├── toggle.tsx
+│       ├── tooltip.tsx
+│       ├── use-mobile.tsx
+│       └── use-toast.ts
+├── components.json
+├── hooks
+│   ├── use-mobile.ts
+│   └── use-toast.ts
+├── index.html
+├── lib
+│   └── utils.ts
+├── next.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+├── public
+│   ├── 002unico_excelente.jpg
+│   ├── 005unico_detalhes.jpg
+│   ├── 049unico_detalhes_comida.jpg
+│   ├── 071unico_detalhes_comida.jpg
+│   ├── 1VariedadeLiberdade
+│   │   ├── 001galeria_pasta1.jpg
+│   │   ├── 002galeria_pasta1.jpg
+│   │   ├── 003galeria_pasta1.jpg
+│   │   ├── 004galeria_pasta1.jpg
+│   │   ├── 005galeria_pasta1.jpg
+│   │   ├── 006galeria_pasta1.jpg
+│   │   ├── 007galeria_pasta1.jpg
+│   │   ├── 008galeria_pasta1.jpg
+│   │   ├── 009galeria_pasta1.jpg
+│   │   ├── 010galeria_pasta1.jpg
+│   │   ├── 011galeria_pasta1.jpg
+│   │   ├── 012galeria_pasta1.jpg
+│   │   ├── 013galeria_pasta1.jpg
+│   │   ├── 014galeria_pasta1.jpg
+│   │   ├── 015galeria_pasta1.jpg
+│   │   ├── 016galeria_pasta1.jpg
+│   │   ├── 017galeria_pasta1.jpg
+│   │   ├── 018galeria_pasta1.jpg
+│   │   ├── 019galeria_pasta1.jpg
+│   │   ├── 020galeria_pasta1.jpg
+│   │   ├── 021galeria_pasta1.jpg
+│   │   ├── 022galeria_pasta1.jpg
+│   │   ├── 023galeria_pasta1.jpg
+│   │   ├── 024galeria_pasta1.jpg
+│   │   ├── 025galeria_pasta1.jpg
+│   │   ├── 026galeria_pasta1.jpg
+│   │   ├── 027galeria_pasta1.jpg
+│   │   ├── 028galeria_pasta1.jpg
+│   │   ├── 029galeria_pasta1.jpg
+│   │   ├── 030galeria_pasta1.jpg
+│   │   ├── 031galeria_pasta1.jpg
+│   │   ├── 032galeria_pasta1.jpg
+│   │   ├── 033galeria_pasta1.jpg
+│   │   ├── 034galeria_pasta1.jpg
+│   │   ├── 035galeria_pasta1.jpg
+│   │   ├── 036galeria_pasta1.jpg
+│   │   ├── 037galeria_pasta1.jpg
+│   │   ├── 038galeria_pasta1.jpg
+│   │   ├── 039galeria_pasta1.jpg
+│   │   ├── 040galeria_pasta1.jpg
+│   │   ├── 041galeria_pasta1.jpg
+│   │   ├── 042galeria_pasta1.jpg
+│   │   ├── 043galeria_pasta1.jpg
+│   │   ├── 044galeria_pasta1.jpg
+│   │   ├── 045galeria_pasta1.jpg
+│   │   ├── 046galeria_pasta1.jpg
+│   │   ├── 047galeria_pasta1.jpg
+│   │   ├── 048galeria_pasta1.jpg
+│   │   ├── 049galeria_pasta1.jpg
+│   │   ├── 050galeria_pasta1.jpg
+│   │   ├── 051galeria_pasta1.jpg
+│   │   ├── 052galeria_pasta1.jpg
+│   │   ├── 053galeria_pasta1.jpg
+│   │   ├── 054galeria_pasta1.jpg
+│   │   ├── 055galeria_pasta1.jpg
+│   │   ├── 056galeria_pasta1.jpg
+│   │   ├── 057galeria_pasta1.jpg
+│   │   ├── 058galeria_pasta1.jpg
+│   │   ├── 059galeria_pasta1.jpg
+│   │   ├── 060galeria_pasta1.jpg
+│   │   ├── 061galeria_pasta1.jpg
+│   │   ├── 062galeria_pasta1.jpg
+│   │   ├── 063galeria_pasta1.jpg
+│   │   ├── 064galeria_pasta1.jpg
+│   │   ├── 065galeria_pasta1.jpg
+│   │   ├── 066galeria_pasta1.jpg
+│   │   ├── 067galeria_pasta1.jpg
+│   │   ├── 068galeria_pasta1.jpg
+│   │   ├── 069galeria_pasta1.jpg
+│   │   ├── 070galeria_pasta1.jpg
+│   │   ├── 071galeria_pasta1.jpg
+│   │   ├── 072galeria_pasta1.jpg
+│   │   ├── 073galeria_pasta1.jpg
+│   │   ├── 074galeria_pasta1.jpg
+│   │   ├── 075galeria_pasta1.jpg
+│   │   ├── 076galeria_pasta1.jpg
+│   │   ├── 077galeria_pasta1.jpg
+│   │   ├── 078galeria_pasta1.jpg
+│   │   ├── 079galeria_pasta1.jpg
+│   │   ├── 080galeria_pasta1.jpg
+│   │   ├── 081galeria_pasta1.jpg
+│   │   ├── 082galeria_pasta1.jpg
+│   │   ├── 083galeria_pasta1.jpg
+│   │   ├── 084galeria_pasta1.jpg
+│   │   ├── 085galeria_pasta1.jpg
+│   │   ├── 086galeria_pasta1.jpg
+│   │   ├── 087galeria_pasta1.jpg
+│   │   ├── 088galeria_pasta1.jpg
+│   │   ├── 089galeria_pasta1.jpg
+│   │   ├── 090galeria_pasta1.jpg
+│   │   ├── 091galeria_pasta1.jpg
+│   │   ├── 092galeria_pasta1.jpg
+│   │   ├── 093galeria_pasta1.jpg
+│   │   ├── 094galeria_pasta1.jpg
+│   │   ├── 095galeria_pasta1.jpg
+│   │   ├── 096galeria_pasta1.jpg
+│   │   ├── 097galeria_pasta1.jpg
+│   │   ├── 098galeria_pasta1.jpg
+│   │   ├── 099galeria_pasta1.jpg
+│   │   ├── 100galeria_pasta1.jpg
+│   │   ├── 101galeria_pasta1.jpg
+│   │   └── 102galeria_pasta1.jpg
+│   ├── 2AtendimentoExcelente
+│   │   ├── 001galeria_pasta2.jpg
+│   │   ├── 002galeria_pasta2.jpg
+│   │   ├── 003galeria_pasta2.jpg
+│   │   ├── 004galeria_pasta2.jpg
+│   │   ├── 005galeria_pasta2.jpg
+│   │   ├── 006galeria_pasta2.jpg
+│   │   ├── 007galeria_pasta2.jpg
+│   │   ├── 008galeria_pasta2.jpg
+│   │   ├── 009galeria_pasta2.jpg
+│   │   ├── 010galeria_pasta2.jpg
+│   │   ├── 011galeria_pasta2.jpg
+│   │   ├── 012galeria_pasta2.jpg
+│   │   ├── 013galeria_pasta2.jpg
+│   │   ├── 014galeria_pasta2.jpg
+│   │   ├── 015galeria_pasta2.jpg
+│   │   ├── 016galeria_pasta2.jpg
+│   │   ├── 017galeria_pasta2.jpg
+│   │   ├── 018galeria_pasta2.jpg
+│   │   ├── 019galeria_pasta2.jpg
+│   │   ├── 020galeria_pasta2.jpg
+│   │   ├── 021galeria_pasta2.jpg
+│   │   ├── 022galeria_pasta2.jpg
+│   │   ├── 023galeria_pasta2.jpg
+│   │   ├── 024galeria_pasta2.jpg
+│   │   ├── 025galeria_pasta2.jpg
+│   │   ├── 026galeria_pasta2.jpg
+│   │   ├── 027galeria_pasta2.jpg
+│   │   ├── 028galeria_pasta2.jpg
+│   │   ├── 029galeria_pasta2.jpg
+│   │   ├── 030galeria_pasta2.jpg
+│   │   ├── 031galeria_pasta2.jpg
+│   │   ├── 032galeria_pasta2.jpg
+│   │   ├── 033galeria_pasta2.jpg
+│   │   ├── 034galeria_pasta2.jpg
+│   │   ├── 035galeria_pasta2.jpg
+│   │   ├── 036galeria_pasta2.jpg
+│   │   ├── 037galeria_pasta2.jpg
+│   │   ├── 038galeria_pasta2.jpg
+│   │   ├── 039galeria_pasta2.jpg
+│   │   ├── 040galeria_pasta2.jpg
+│   │   └── 041galeria_pasta2.jpg
+│   ├── 3AmbienteAcolhedor
+│   │   ├── 001galeria_pasta3.jpg
+│   │   ├── 002galeria_pasta3.jpg
+│   │   ├── 003galeria_pasta3.jpg
+│   │   ├── 004galeria_pasta3.jpg
+│   │   ├── 005galeria_pasta3.jpg
+│   │   ├── 006galeria_pasta3.jpg
+│   │   ├── 007galeria_pasta3.jpg
+│   │   ├── 008galeria_pasta3.jpg
+│   │   ├── 009galeria_pasta3.jpg
+│   │   ├── 010galeria_pasta3.jpg
+│   │   ├── 011galeria_pasta3.jpg
+│   │   ├── 012galeria_pasta3.jpg
+│   │   ├── 013galeria_pasta3.jpg
+│   │   ├── 014galeria_pasta3.jpg
+│   │   ├── 015galeria_pasta3.jpg
+│   │   ├── 016galeria_pasta3.jpg
+│   │   ├── 017galeria_pasta3.jpg
+│   │   ├── 018galeria_pasta3.jpg
+│   │   ├── 019galeria_pasta3.jpg
+│   │   ├── 020galeria_pasta3.jpg
+│   │   ├── 021galeria_pasta3.jpg
+│   │   ├── 022galeria_pasta3.jpg
+│   │   ├── 023galeria_pasta3.jpg
+│   │   ├── 024galeria_pasta3.jpg
+│   │   ├── 025galeria_pasta3.jpg
+│   │   ├── 026galeria_pasta3.jpg
+│   │   ├── 027galeria_pasta3.jpg
+│   │   ├── 028galeria_pasta3.jpg
+│   │   ├── 029galeria_pasta3.jpg
+│   │   ├── 030galeria_pasta3.jpg
+│   │   └── 031galeria_pasta3.jpg
+│   ├── 4Lanchonete
+│   │   ├── 001galeria_pasta4.jpg
+│   │   ├── 002galeria_pasta4.jpg
+│   │   ├── 003galeria_pasta4.jpg
+│   │   ├── 004galeria_pasta4.jpg
+│   │   ├── 005galeria_pasta4.jpg
+│   │   ├── 006galeria_pasta4.jpg
+│   │   ├── 007galeria_pasta4.jpg
+│   │   ├── 008galeria_pasta4.jpg
+│   │   ├── 009galeria_pasta4.jpg
+│   │   ├── 010galeria_pasta4.jpg
+│   │   ├── 011galeria_pasta4.jpg
+│   │   ├── 012galeria_pasta4.jpg
+│   │   └── 013galeria_pasta4.jpg
+│   ├── 8.jpg
+│   ├── apple-icon.png
+│   ├── ESG001.png
+│   ├── ESG002.png
+│   ├── galeria1_1.jpg
+│   ├── galeria1_2.jpg
+│   ├── galeria1_3.jpg
+│   ├── galeria1_4.jpg
+│   ├── galeria2_1.jpg
+│   ├── galeria2_2.jpg
+│   ├── galeria2_3.jpg
+│   ├── galeria2_4.jpg
+│   ├── galeria3_1.jpg
+│   ├── galeria3_2.jpg
+│   ├── galeria3_3.jpg
+│   ├── galeria3_4.jpg
+│   ├── icon-dark-32x32.png
+│   ├── icon-light-32x32.png
+│   ├── icon.svg
+│   ├── logo-unico.png
+│   ├── modern-corporate-restaurant-interior-with-elegant-.jpg
+│   ├── placeholder.jpg
+│   ├── placeholder-logo.png
+│   ├── placeholder-logo.svg
+│   ├── placeholder.svg
+│   ├── placeholder-user.jpg
+│   ├── producao.png
+│   ├── qualidade.png
+│   ├── slider-unico001.webp
+│   ├── slider-unico002.webp
+│   ├── slider-unico003.webp
+│   ├── slider-unico004.webp
+│   ├── slider-unico005.webp
+│   ├── slider-unico006.webp
+│   ├── slider-unico007.webp
+│   ├── slider-unico008.webp
+│   ├── slider-unico009.webp
+│   ├── slider-unico010.webp
+│   ├── slider-unico011.webp
+│   ├── Unico30.jpg
+│   ├── Unico30.JPG
+│   └── variedade_thumb.png
+├── siteunico
+├── siteunico.zip
+├── styles
+│   └── globals.css
+├── tree.txt
+└── tsconfig.json
+
+14 directories, 318 files
